@@ -1,0 +1,7 @@
+{
+  "name": "ValoraProducto IA",
+  "description": "Una aplicación para valorar y revisar productos usando la webcam y Gemini API para obtener información de precios y checklists de funcionamiento.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
