@@ -8,11 +8,11 @@
   
   <!-- PWA Meta Tags -->
   <meta name="theme-color" content="#1e293b"/> <!-- bg-slate-800 -->
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="./manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Valora IA">
-  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192x192.png">
 
 
   <style>
@@ -47,21 +47,23 @@
 <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.1.0/",
     "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
     "@google/genai": "https://esm.sh/@google/genai@^1.0.1",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+    "vite": "https://esm.sh/vite@^6.3.5",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^4.4.1"
   }
 }
 </script>
 </head>
 <body class="bg-slate-900 text-slate-100 selection:bg-indigo-500 selection:text-white">
   <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+  <script type="module" src="./index.tsx"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('./service-worker.js')
           .then(registration => {
             console.log('ServiceWorker registered: ', registration);
           })
@@ -72,5 +74,4 @@
     }
   </script>
 </body>
-</html><link rel="stylesheet" href="index.css">
-<script src="index.tsx" type="module"></script>
+</html>
